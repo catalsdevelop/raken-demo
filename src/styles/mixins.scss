@@ -1,0 +1,51 @@
+$grayBorderColor:#e4e4e4;
+$smallDevice: 640px;
+
+// triangle 
+@mixin triangle($direction, $size, $borderColor, $bgColor:#fff ) {
+  position: relative;
+  top: 0;
+  border: 1px solid $borderColor;
+  background: $bgColor;
+  border-radius: 9px;
+  padding: 6px 0;
+
+  &:before {
+    content:"";
+    position:absolute;
+    z-index: 0;
+    height: $size; 
+    width: $size;
+    border-right:1px solid $borderColor;
+    border-bottom:1px solid $borderColor;
+    background-color:$bgColor;
+
+    @if $direction == top { 
+      transform: rotate(-135deg);
+      top:-$size*0.5;
+      left: 50%;
+      margin-left: -$size/2;
+    } @else if $direction == right { 
+      transform: rotate(-45deg); 
+      right:-$size*0.5; 
+    } @else if $direction == bottom { 
+      transform: rotate(45deg);
+      bottom:-$size*0.5; 
+    } @else if $direction == left { 
+      transform: rotate(135deg);
+      left:-$size*0.5;
+    }
+  }
+}
+
+@mixin screen($res-min, $res-max){ 
+  @media screen and ( min-width: $res-min ) and ( max-width: $res-max ){ 
+    @content; 
+  } 
+}
+
+@mixin small($res-max: $smallDevice) {
+  @media screen and ( max-width: $res-max ){ 
+    @content; 
+  } 
+}

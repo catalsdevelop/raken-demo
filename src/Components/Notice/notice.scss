@@ -1,0 +1,19 @@
+@import '../../styles/mixins.scss';
+
+.notice {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #F26620;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 200;
+}
+
+@mixin notice-mobile {
+  .notice {
+    transform: scale(1.25);
+  }
+}

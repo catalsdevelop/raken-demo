@@ -1,0 +1,38 @@
+@import '../../styles/mixins.scss';
+
+.tip-container {
+  @include triangle(top, 20px, $grayBorderColor);
+  position:absolute;
+  top:84px;
+  right: 10px;
+  display: none;
+
+  .content {
+    width: 190px;
+    z-index: 1;
+    position: relative;// set positon to a none-static value can make this element on top of the tri element
+  }
+
+  &:before {
+    left: auto;
+    right: 30px;
+  }
+}
+
+@mixin tip-mobile {
+  .tip-container {
+    top: 0;
+    right: 0;
+    position: static;
+    border-radius: 0;
+    border:none;
+    
+    &:before {//hide the triabgle
+      display: none;
+    }
+
+    .content {
+      width: auto;
+    }
+  }
+}

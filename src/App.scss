@@ -1,0 +1,20 @@
+@import './Components/Logo/logo.scss';
+@import './Components/Navigator/navigator.scss';
+@import './Components/Avatar/avatar.scss';
+@import './Components/Banner/banner.scss';
+@import './Components/Tip/tip.scss';
+@import './Components/ListView/listView.scss';
+@import './Components/Notice/notice.scss';
+
+#profile-ddl:target {
+  display:block;
+}
+
+@include small {
+  @include avatar-mobile;
+  @include banner-mobile;
+  @include logo-mobile;
+  @include nav-mobile;
+  @include tip-mobile;
+  @include notice-mobile;
+}

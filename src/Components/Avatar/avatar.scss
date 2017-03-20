@@ -1,0 +1,37 @@
+@import '../../styles/mixins.scss';
+
+$avatarWidth: 50px; // avatar size
+
+.avatar {
+  .content {
+    width: $avatarWidth;
+    height: $avatarWidth;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+  }
+
+  .detail {
+    display: none;
+    font-size: 16px;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+@mixin avatar-mobile {
+  .avatar {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+    .detail {
+      display: inline-block;
+    }
+
+    .content {
+      transform: scale(0.6);
+    }
+  }
+}

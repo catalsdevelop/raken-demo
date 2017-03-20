@@ -1,0 +1,39 @@
+@import '../../styles/mixins.scss';
+
+.banner {
+  height: 76px;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 4px 0 rgba(0,0,0, .25);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #4a4a4a;
+
+  .avatar-container {
+    width: 100px;
+    height: 100%;
+    border-left: 1px solid $grayBorderColor;
+    display: flex;// make the avator v-h center
+    align-items: center;
+    justify-content: center;
+    position:relative;// set this value to cover tip position
+  }
+}
+
+@mixin banner-mobile {
+  .banner {
+    padding: 1em 0;
+    height: auto;
+    line-height: 3em;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+
+    .avatar-container {
+      border-left: none;
+      width: auto;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+$itemWidth:25px;
+$stretchWidth:2px;
+
+.list {
+  overflow: hidden;
+
+  * {
+    box-sizing: border-box;// auto adjust height and width
+  }
+
+  li {
+    padding: 0 $itemWidth;
+    
+    &:hover {
+      background-color: #d8d8d8;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0, .2) inset;
+      margin: 0 (-$stretchWidth);
+      padding: 0 $itemWidth + $stretchWidth;
+    }
+
+    &:last-child a {
+      border-bottom: 0;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececec;
+    height: 50px;
+    color: #4a4a4a;
+
+    &:hover{
+      border-bottom: 0;
+    }
+  }
+}

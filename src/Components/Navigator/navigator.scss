@@ -1,0 +1,26 @@
+@import '../../styles/mixins.scss';
+
+.navigator {
+  flex: 1;
+  justify-content: flex-end; // make sure all navigator items align right
+  display: flex;
+  flex-wrap: wrap;
+  align-content:space-between;
+
+  a {
+    color: inherit;
+    &:hover, &.active {
+      color: #f26620;
+    }
+  }
+
+  li {
+    margin-right: 50px;
+  }
+}
+
+@mixin nav-mobile {
+  .navigator {
+    display: block;
+  }
+}
