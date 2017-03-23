@@ -8,9 +8,10 @@ $avatarWidth: 50px; // avatar size
     height: $avatarWidth;
     border-radius: 50%;
     background-color: #d8d8d8;
+    user-select: none;
   }
 
-  .detail {
+  .desc {
     display: none;
     font-size: 16px;
   }
@@ -26,7 +27,7 @@ $avatarWidth: 50px; // avatar size
     align-items: center;
     justify-content: center;
     
-    .detail {
+    .desc {
       display: inline-block;
     }
 

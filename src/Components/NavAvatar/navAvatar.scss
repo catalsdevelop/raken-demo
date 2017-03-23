@@ -1,0 +1,42 @@
+@import '../../styles/mixins.scss';
+$transitionDuration: 0.5s;
+
+.click-container {
+  height:100%;
+}
+
+.avatar-container {
+  width: 100px;
+  height: 100%;
+  border-left: 1px solid $grayBorderColor;
+  display: flex;// make the avator v-h center
+  align-items: center;
+  justify-content: center;
+  position: relative;// set this value to cover tip position
+  transition: background-color $transitionDuration;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .avatar {
+    transition: transform .5s;
+  }
+
+  &.active {
+    cursor: pointer;
+    background-color: $grayBorderColor;
+
+    .avatar {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@mixin navava-mobile {
+  .avatar-container {
+    border-left: none;
+    width: auto;
+    display: block;
+  }
+}

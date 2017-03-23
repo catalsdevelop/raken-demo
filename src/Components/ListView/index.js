@@ -11,7 +11,8 @@ export default class ListView extends Component {
 export class ListViewItem extends Component {
   render() {
     return (
-      <li><a href="#">{ this.props.children }</a></li>
+      // eslint-disable-next-line
+      <li><a href="javascript:;">{ this.props.children }</a></li>
     )
   }
 }

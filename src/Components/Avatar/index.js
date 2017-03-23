@@ -5,9 +5,9 @@ export default class Avatar extends Component {
   render() {
     return (
       <div className="avatar">
-        <span className="detail">All SETTINGS</span>
+        <span className="desc">All SETTINGS</span>
         <div className="content">
-          <a href="#profile-ddl"><img src={face} alt="avatar-img" /></a>
+          <img src={face} alt="avatar-img" />
         </div>
       </div>
     )
